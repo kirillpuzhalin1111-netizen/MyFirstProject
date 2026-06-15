@@ -1,14 +1,18 @@
-# MyFirstProject
+# MebelFlow
 
-Учебный проект по Git.
-
-## Функциональность
-- Приветствие пользователя
-- Вывод текущего времени
-- Меню
+Система управления заказами мебельного центра.
 
 ## Запуск
-python src/app.py
 
-## Лицензия
-MIT
+```bash
+python src/main.py
+```
+
+## Основные команды Git:
+
+```bash
+git status
+git add .
+git commit -m "message"
+git push origin master
+```
