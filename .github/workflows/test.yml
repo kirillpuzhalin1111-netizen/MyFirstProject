@@ -25,6 +25,12 @@ jobs:
         python -m pip install --upgrade pip
         pip install pytest pytest-cov pytest-mock
     
+    - name: Create test directories if needed
+      run: |
+        mkdir -p src tests
+        touch src/__init__.py tests/__init__.py
+    
     - name: Run tests
       run: |
-        python -m pytest tests/ -v
+        python -m pytest tests/ -v --tb=short
+      continue-on-error: false
