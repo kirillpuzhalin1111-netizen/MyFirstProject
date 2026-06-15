@@ -1,4 +1,5 @@
 import datetime
+from auth import login
 
 def show_menu():
     print("\n=== Главное меню ===")
@@ -7,6 +8,10 @@ def show_menu():
     print("3. Выйти")
 
 def main():
+    if not login():
+        print("Доступ запрещен.")
+        return
+    
     while True:
         show_menu()
         choice = input("Выберите действие (1-3): ")
